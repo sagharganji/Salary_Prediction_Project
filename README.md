@@ -1,7 +1,10 @@
 # Salary & Job-Satisfaction Prediction
 
 <p align="center">
-  <img src="assets/salary-job-satisfaction-banner.png" alt="Salary and Job-Satisfaction Prediction" width="100%">
+  <img
+    src="assets/Salary%20%26%20Job%20Satisfaction%20Prediction%20Dashboard.png"
+    alt="Salary and Job-Satisfaction Prediction"
+    width="100%">
 </p>
 
 A machine learning project focused on salary estimation and job-satisfaction classification for data-related positions, using a dataset of 5,892 job postings.
