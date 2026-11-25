@@ -1,78 +1,149 @@
-## **Salary Prediction Data Science Project**
+# Salary & Job-Satisfaction Prediction
 
-This repository contains two Jupyter Notebooks for predicting the salary and satisfaction level of data-related positions based on location, company reviews, and job titles.
+<p align="center">
+  <img src="assets/salary-job-satisfaction-banner.png" alt="Salary and Job-Satisfaction Prediction" width="100%">
+</p>
 
-## **Salary_Prediction.ipynb**
+A machine learning project focused on salary estimation and job-satisfaction classification for data-related positions, using a dataset of 5,892 job postings.
 
-This notebook aims to develop a machine learning model to predict the salary of data-related positions. The model will be trained on a dataset of job postings that includes information on location, company reviews, job title, and salary. The goal is to provide a tool to help data professionals understand their worth and negotiate better salaries.
+The project explores how job characteristics and company-related attributes can be used to estimate salaries and predict whether a salary is satisfactory.
 
-The model uses **linear regression**, which is a statistical method that models the relationship between two variables by fitting a linear equation to observed data. The goal of linear regression is to predict the value of one variable (the dependent variable) given the value of another variable (the independent variable).
+## Project Overview
 
-### Dependencies
+This repository contains two Jupyter Notebooks covering two supervised machine learning tasks:
 
-To run this notebook, you will need to have the following dependencies installed:
+### 1. Salary Estimation — Regression
 
-* pandas
-* numpy
-* matplotlib
-* scikit-learn
+The first notebook develops a Linear Regression model to estimate salaries for data-related positions.
 
-### Installation
+The analysis considers job-related and company-level information, including job titles, salary estimates, company ratings, and location.
 
-You can install these dependencies using pip:
+### 2. Salary Satisfaction — Classification
 
-```bash
-pip install pandas numpy matplotlib scikit-learn
+The second notebook investigates whether salaries can be classified as satisfactory or not based on job and company characteristics.
+
+Four classification algorithms are considered:
+
+- Logistic Regression
+- K-Nearest Neighbors (KNN)
+- Decision Tree
+- Random Forest
+
+## Dataset
+
+The project uses 5,892 job posting records.
+
+The dataset includes features such as:
+
+- Job Title
+- Salary Estimate
+- Company Rating
+- Location
+- Company Size
+- Industry
+- Sector
+- Ownership Type
+- Company Revenue
+
+### Data Preparation
+
+The data preparation process includes:
+
+- Cleaning salary ranges and converting salary estimates into numerical values.
+- Handling categorical variables.
+- Preparing the data for regression and classification tasks.
+- Selecting job-related and company-related features for model development.
+
+## Model Performance
+
+### Salary Estimation
+
+| Metric | Model | Result |
+|---|---|---|
+| Mean Absolute Error (MAE) | Linear Regression | ≈ 23.8 (USD thousands) |
+
+The reported MAE corresponds to an average absolute prediction error of approximately USD 23,800 on the original salary scale.
+
+### Salary Satisfaction Classification
+
+| Metric | Model | Result |
+|---|---|---|
+| Test Accuracy | Logistic Regression | ≈ 70% |
+
+Logistic Regression achieved approximately 70% test accuracy. KNN, Decision Tree, and Random Forest were also included in the model comparison.
+
+The reported metrics reflect the evaluation results documented for this project.
+
+## Repository Structure
+
+```text
+Salary_Prediction_Project/
+│
+├── assets/
+│   └── salary-job-satisfaction-banner.png
+│
+├── Salary_Prediction.ipynb
+├── Salary_Prediction_classification_all.ipynb
+├── df.csv
+└── README.md
 ```
 
-### Execution
+## Technologies & Libraries
 
-Once you have installed the dependencies, you can run the notebook by opening it in Jupyter Notebook and clicking the `Run` button.
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Scikit-learn
+- Jupyter Notebook
 
-## **Salary_Prediction_classification_all.ipynb**
+## Installation
 
-This notebook aims to predict whether the salary for data-related positions, based on location, company reviews, and job title, is satisfactory or not. The model uses three machine learning algorithms: logistic regression, decision tree, and random forest.
-
-* **Logistic regression** is a statistical method that models the probability of a binary outcome (e.g., satisfactory or not satisfactory) given a set of independent variables (e.g., location, company reviews, job title).
-
-* **Decision tree** is a tree-like structure that represents a set of decisions and their possible consequences. It is a non-parametric model, meaning that it does not make any assumptions about the underlying data.
-
-* **Random forest** is an ensemble learning method that combines multiple decision trees to create a more accurate and robust model.
-
-### Dependencies
-
-To run this notebook, you will need to have the following dependencies installed:
-
-* pandas
-* NumPy
-* matplotlib
-* scikit-learn
-
-### Installation
-
-You can install these dependencies using pip:
+Clone the repository:
 
 ```bash
-pip install pandas numpy matplotlib scikit-learn
+git clone https://github.com/sagharganji/Salary_Prediction_Project.git
 ```
 
-### Execution
+Navigate to the project directory:
 
-Once you have installed the dependencies, you can run the notebook by opening it in Jupyter Notebook and clicking the `Run` button.
+```bash
+cd Salary_Prediction_Project
+```
 
-## Contributing
+Install the required dependencies:
 
-We welcome contributions to this project. Please feel free to submit pull requests with bug fixes or new features.
+```bash
+pip install pandas numpy matplotlib scikit-learn jupyter
+```
 
-## License
+## Running the Notebooks
 
-This project is licensed under the MIT License.
+Start Jupyter Notebook:
 
+```bash
+jupyter notebook
+```
 
-**I want you to know that contributions to this project are welcome. If you have any suggestions, improvements, or bug fixes, please submit a pull request or open an issue.**
+Open either of the following notebooks:
 
-**Please customize the README to fit your specific project and provide relevant information that will help users understand and use your salary prediction project effectively.**
+- `Salary_Prediction.ipynb` — Salary estimation using Linear Regression.
+- `Salary_Prediction_classification_all.ipynb` — Salary-satisfaction classification.
 
-**I apologize for the inconvenience caused by the lack of specific examples. If you have any further questions or need assistance with any specific aspect of your README file, please let me know, and I'll be happy to help.**
+Make sure `df.csv` remains in the project root directory when running the notebooks.
 
-I hope this is helpful!
+## Project Information
+
+**Author:** Saghar Ganji
+
+**Field:** Data Science & Machine Learning
+
+**Project Period:** September 2023 – November 2023
+
+**GitHub:** [github.com/sagharganji](https://github.com/sagharganji)
+
+**LinkedIn:** [linkedin.com/in/saghar-ganji](https://www.linkedin.com/in/saghar-ganji/)
+
+---
+
+This project is part of my Data Science and Machine Learning portfolio.
